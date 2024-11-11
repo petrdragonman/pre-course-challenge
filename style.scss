@@ -1,0 +1,15 @@
+body {
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: start;
+    //align-items: center;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .logo {
+        width: 25px;
+        height: 25px;
+    }
+}

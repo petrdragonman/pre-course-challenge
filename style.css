@@ -1,3 +1,11 @@
-
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header .logo {
+  width: 25px;
+  height: 25px;
+}
 
 /*# sourceMappingURL=style.css.map */
