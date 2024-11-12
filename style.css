@@ -1,11 +1,183 @@
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
 header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+  padding: 0px 60px;
+  border: 1px solid red;
 }
 header .logo {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
+}
+header nav {
+  padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+}
+header nav a {
+  color: #404040;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header nav a:hover {
+  transform: scale(1.05);
+}
+
+.hero-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  color: white;
+  border: 1px solid red;
+}
+.hero-page .hero-page-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 50%;
+  height: 30vh;
+  padding-left: 60px;
+  background-color: #689572;
+  border: 1px solid red;
+}
+.hero-page .hero-page-text h2 {
+  font-family: "Rammetto One", sans-serif;
+  font-size: 2.4em;
+  margin: 0;
+}
+.hero-page .hero-page-text .hero-btn-reviews {
+  border: 2px solid white;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+.hero-page .hero-page-image {
+  width: 50%;
+  height: 30vh;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 60px;
+  /* header of the dropdown list */
+  /* dropdown list + header - outer body */
+}
+.menu h2 {
+  font-family: "Rammetto One", sans-serif;
+  font-size: 2.4em;
+  margin: 0;
+  color: #FAA196;
+}
+.menu section {
+  width: 100%;
+  padding: 10px 0px;
+}
+.menu summary {
+  background-color: #EBC9C4;
+  width: 100%;
+  font-weight: bold;
+  padding: 10px;
+  text-indent: 5px;
+}
+.menu details {
+  background-color: white;
+  border: 1px solid red;
+}
+.menu details div {
+  background-color: white;
+  padding-top: 10px;
+  margin: 0px;
+}
+.menu details article {
+  background-color: #EBC9C4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+  padding: 10px;
+}
+.menu details article img {
+  width: 200px;
+  height: 200px;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #FAA196;
+}
+.reviews h2 {
+  font-family: "Rammetto One", sans-serif;
+  font-size: 2.4em;
+  margin: 0;
+  color: white;
+}
+.reviews .review-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+}
+.reviews .review-cards article {
+  border: 2px solid white;
+  width: 42%;
+  height: 100px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.reviews .review-cards article .review-text {
+  font-style: italic;
+  font-weight: bold;
+}
+.reviews .review-cards article .review-ownership {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+  padding: 0px 60px;
+  background-color: #82A289;
+  color: white;
+  border: 1px solid red;
+}
+footer .footer-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.4em;
+}
+footer .footer-logo img {
+  padding-bottom: 0.5em;
 }
 
 /*# sourceMappingURL=style.css.map */

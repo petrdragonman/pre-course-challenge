@@ -1,15 +1,272 @@
+@use './SCSS/partials/colors' as c;
+
 body {
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: start;
-    //align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
 }
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    height: 6vh;
+    padding: 0px 60px;
+    border: 1px solid red;
     .logo {
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
+    }
+    nav {
+        //height: 5vh;
+        padding-right: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1em;
+        a {
+            color: c.$black;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
     }
 }
+.hero-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; // moves it right
+    align-items: center;  // moves is dow
+    height: 30vh;
+    color: white;
+    border: 1px solid red;
+    .hero-page-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 50%;
+        height: 30vh;
+        padding-left: 60px;
+        background-color: c.$green-dark;
+        border: 1px solid red;
+        h2 {
+            font-family: "Rammetto One", sans-serif;
+            font-size: 2.4em;
+            margin: 0;
+        }
+        p {
+        
+        }
+        .hero-btn-reviews {
+            border: 2px solid white;
+            font-weight: 600;
+            padding: 10px 30px;
+        }
+    }
+    .hero-page-image {
+        width: 50%;
+        height: 30vh;
+    }
+}
+
+
+// summary {
+//     //background-color: #2196F3;
+//     //background-color: #455e7b;
+//     background-color: #b1cadf;
+//     color: white;
+//     padding: 10px;
+//     border-radius: 5px;
+//   }
+  
+//   details[open] summary {border-radius: 5px 5px 0 0;}
+  
+//   details {
+//     background: #b1cadf;
+//     border-radius: 5px;
+//   }
+  
+//   /* extra styles */
+  
+// //   * {box-sizing: border-box;}
+// //   body {font-family: system-ui, sans-serif; margin: 20px; background: #fff9f1;}
+// //   h1 {font-size: 1.2em;}
+// //   article > *:first-child {margin: 0;}
+// //   article > * + * {margin: 0.75em 0 0 0;}
+// //   pre {color: white; background: #455e7b; padding: 1em; border-radius: 5px;}
+// //   article {padding: 10px; margin: 0;}
+// //   details code {font-size: 1.1em;}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 60px;
+    h2 {
+        font-family: "Rammetto One", sans-serif;
+        font-size: 2.4em;
+        margin: 0;
+        color: c.$pink;
+    }
+    section {
+        width: 100%;
+        padding: 10px 0px;
+        //border: 1px solid red;
+    }
+    /* header of the dropdown list */
+    summary {
+        background-color: c.$pink-light;
+        width: 100%;
+        font-weight: bold;
+        padding: 10px;
+        text-indent: 5px;
+    }
+    /* dropdown list + header - outer body */
+    details {
+        background-color: white;
+        border: 1px solid red;
+
+        // this is the card content
+        div {
+            background-color: white;
+            padding-top: 10px;
+            margin: 0px;
+            //padding: 1em;
+            //border-radius: 5px;
+        }
+        article {
+            background-color: c.$pink-light;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            height: 300px;
+            padding: 10px;
+            img {
+                width: 200px;
+                height: 200px;
+                //padding: 5px;
+            }
+        }
+    }
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 20px 60px;
+    background-color: c.$pink;
+    h2 {
+        font-family: "Rammetto One", sans-serif;
+        font-size: 2.4em;
+        margin: 0;
+        color: white;
+    }
+    .review-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+        article {
+            border: 2px solid white;
+            width: 42%;
+            height: 100px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .review-text {
+                font-style: italic;
+                font-weight: bold;
+            }
+            .review-ownership {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .review-name {
+    
+                }
+                .review-date {
+        
+                }
+            }
+        }
+    }
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vh;
+    padding: 0px 60px;
+    background-color: c.$green-light;
+    color: white;
+    border: 1px solid red;
+    .footer-logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.4em;
+        img {
+            padding-bottom: 0.5em;
+        }
+    }
+}
+
+
+// @mixin full-screen {
+//     height: 100vh;
+//     width: 100%;
+// }
+
+// nav {
+//     height: 5vh;
+//     padding-top: 10px;
+//     padding-left: 2em;
+//     @include mixins.flex;
+//     gap: 1em;
+//     a {
+//       z-index: 2;
+//       color: colors.$foggy-light;
+//       text-decoration: none;
+//       &:hover {
+//         color: colors.$sunlit-leaf;
+//         transform: scale(1.05);
+//       }
+//     }
+// }
+
+// @mixin flex($direction: row, $justify: flex-start) {
+//     display: flex;
+//     flex-direction: $direction;
+//     justify-content: $justify;
+// }
+
+// // <uniquifier>: Use a unique and descriptive class name
+// // <weight>: Use a value from 300 to 800
+
+// .open-sans-<uniquifier> {
+//     font-family: "Open Sans", sans-serif;
+//     font-optical-sizing: auto;
+//     font-weight: <weight>;
+//     font-style: normal;
+//     font-variation-settings:
+//       "wdth" 100;
+//   }
+
+// .rammetto-one-regular {
+//     font-family: "Rammetto One", sans-serif;
+//     font-weight: 400;
+//     font-style: normal;
+//   }
