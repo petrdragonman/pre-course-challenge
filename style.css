@@ -93,30 +93,62 @@ header nav a:hover {
   background-color: #EBC9C4;
   width: 100%;
   font-weight: bold;
-  padding: 10px;
-  text-indent: 5px;
+  padding: 10px 0px;
 }
 .menu details {
   background-color: white;
-  border: 1px solid red;
 }
 .menu details div {
   background-color: white;
   padding-top: 10px;
   margin: 0px;
 }
+.menu details .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
 .menu details article {
   background-color: #EBC9C4;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 200px;
-  height: 300px;
+  width: 250px;
   padding: 10px;
 }
 .menu details article img {
-  width: 200px;
-  height: 200px;
+  width: 24vw;
+  height: 70%;
+}
+.menu details article .warnings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0px;
+  gap: 10px;
+  background-color: #EBC9C4;
+  padding-bottom: 10px;
+}
+.menu details article .contains {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8em;
+  padding: 0;
+  margin: 0;
+  background-color: #EBC9C4;
+}
+.menu details article .contains h3 {
+  font-size: 1.3em;
+  padding: 0px;
+}
+.menu details article .contains .icon {
+  width: 20px;
+  height: 20px;
+  padding: 0px;
 }
 
 .reviews {
@@ -139,6 +171,7 @@ header nav a:hover {
   justify-content: center;
   gap: 20px;
   padding: 10px;
+  font-size: 0.9em;
 }
 .reviews .review-cards article {
   border: 2px solid white;
@@ -149,9 +182,27 @@ header nav a:hover {
   flex-direction: column;
   justify-content: center;
 }
+.reviews .review-cards article .review-text-container {
+  display: flex;
+  flex-direction: rov;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 5px;
+  gap: 10px;
+}
+.reviews .review-cards article .review-text-container :first-child {
+  align-self: flex-start;
+}
+.reviews .review-cards article .review-text-container :last-child {
+  align-self: flex-end;
+}
+.reviews .review-cards article img {
+  height: 20px;
+}
 .reviews .review-cards article .review-text {
   font-style: italic;
   font-weight: bold;
+  margin: 0px;
 }
 .reviews .review-cards article .review-ownership {
   display: flex;
