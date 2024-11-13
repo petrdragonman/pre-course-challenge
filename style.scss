@@ -12,13 +12,12 @@ header {
     align-items: center;
     height: 6vh;
     padding: 0px 60px;
-    border: 1px solid red;
+    //border: 1px solid red;
     .logo {
         width: 30px;
         height: 30px;
     }
     nav {
-        //height: 5vh;
         padding-right: 10px;
         display: flex;
         flex-direction: row;
@@ -43,7 +42,7 @@ header {
     align-items: center;  // moves is dow
     height: 30vh;
     color: white;
-    border: 1px solid red;
+    //border: 1px solid red;
     .hero-page-text {
         display: flex;
         flex-direction: column;
@@ -53,17 +52,14 @@ header {
         height: 30vh;
         padding-left: 60px;
         background-color: c.$green-dark;
-        border: 1px solid red;
+        //border: 1px solid red;
         h2 {
             font-family: "Rammetto One", sans-serif;
             font-size: 2.4em;
             margin: 0;
         }
-        p {
-        
-        }
         .hero-btn-reviews {
-            border: 2px solid white;
+            //border: 2px solid white;
             font-weight: 600;
             padding: 10px 30px;
         }
@@ -73,32 +69,6 @@ header {
         height: 30vh;
     }
 }
-
-
-/////////////////////////////////////////////
-// .test {
-//     details {
-//         background-color: white;
-//         border-radius: 3px;
-//         summary {
-//             background-color: c.$pink-light;
-//             padding: 10px;
-//         }
-//         .container {
-//             padding: 10px 0px;
-//             display: flex;
-//             flex-direction: row;
-//             justify-content: space-between;
-//             gap: 10px;
-//             div {
-//                 height: 300px;
-//                 width: 250px;
-//                 background-color: c.$pink-light;
-//             }
-//         }
-//     }
-// }
-/////////////////////////////////////////////
 
 .menu {
     display: flex;
@@ -158,7 +128,7 @@ header {
                 padding: 0px;
                 gap: 10px;
                 background-color: c.$pink-light;
-                padding-bottom: 10px;
+                //padding-bottom: 10px;
                 
             }
             .contains {
@@ -228,27 +198,20 @@ header {
                     align-self: flex-end;
                 }
             }
-            //.container {
-                img {
-                    height: 20px;
-                }
-                .review-text {
-                    font-style: italic;
-                    font-weight: bold;
-                    margin: 0px;
-                }
-                .review-ownership {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    .review-name {
-        
-                    }
-                    .review-date {
-            
-                    }
-                }
-           // }
+            img {
+                height: 20px;
+            }
+            .review-text {
+                font-style: italic;
+                font-weight: bold;
+                margin: 0px;
+            }
+            .review-ownership {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                
+            }
         }
     }
 }
@@ -320,90 +283,3 @@ footer {
 //     font-weight: 400;
 //     font-style: normal;
 //   }
-
-
-//////////////////////////////////
-// <details>
-//   <summary>Click me!</summary>
-//   <p>Peekaboo! Here's some hidden content!</p>
-// </details>
-// Basically any HTML content can be placed inside the <details> element. 
-// The <summary> element provides the prompt for the user to click on the element 
-// to reveal more content, and it must be the first child of the <details> element.
-/////////////////////////////////
-/// 
-/// 
-/// 
-// .menu {
-// display: flex;
-// flex-direction: column;
-// justify-content: center;
-// align-items: center;
-// padding: 40px 60px;
-// h2 {
-//     font-family: "Rammetto One", sans-serif;
-//     font-size: 2.4em;
-//     margin: 0;
-//     color: c.$pink;
-// }
-// section {
-//     width: 100%;
-//     padding: 10px 0px;
-// }
-// /* header of the dropdown list */
-// summary {
-//     background-color: c.$pink-light;
-//     width: 100%;
-//     font-weight: bold;
-//     padding: 10px;
-//     text-indent: 5px;
-// }
-// /* dropdown list + header - outer body */
-// details {
-//     background-color: white;
-    
-//     // this is the card content
-//     div {
-//         //border: 1px solid red;
-//         background-color: white;
-//         padding-top: 10px;
-//         margin: 0px;
-//     }
-//     article {
-//         background-color: c.$pink-light;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         width: 200px;
-//         height: 300px;
-//         padding: 10px;
-//         img {
-//             width: 200px;
-//             height: 200px;
-//         }
-//         .contains {
-//             display: flex;
-//             flex-direction: row;
-//             justify-content:flex-start;
-//             align-items: center;
-//             gap: 10px;
-//             padding: 0;
-//             margin: 0;
-//             background-color: c.$pink-light;
-//             //border: 1px solid red;
-//             //padding-bottom: 20px;
-//             h3 {
-//                 font-size: 1.2em;
-//                 padding: 0px;
-//                 //border: 1px solid red;
-//             }
-//             .icon {
-//                 width: 20px;
-//                 height: 20px;
-//                 padding: 0px;
-//             }
-//         }
-//     }
-    
-// }
-// }
