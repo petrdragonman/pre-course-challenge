@@ -52,16 +52,22 @@ header nav a:hover {
   padding-left: 60px;
   background-color: #689572;
 }
-.hero-page .hero-page-text h2 {
+.hero-page .hero-page-text .hero-page-heading {
   font-family: "Rammetto One", sans-serif;
-  font-size: 2.4em;
-  margin: 0;
+  font-size: 2em;
+  padding: 0px;
+}
+.hero-page .hero-page-text .hero-page-description {
+  padding: 0px;
+  margin-bottom: 20px;
 }
 .hero-page .hero-page-text .hero-btn-reviews {
+  border: 2px solid white;
   font-weight: 600;
   padding: 10px 30px;
 }
 .hero-page .hero-page-image {
+  background-color: #689572;
   width: 50%;
   height: 30vh;
 }
@@ -111,11 +117,11 @@ header nav a:hover {
   flex-direction: column;
   align-items: center;
   width: 250px;
-  padding: 10px;
+  padding: 16px;
 }
 .menu details article img {
-  width: 24vw;
-  height: 70%;
+  width: 250px;
+  height: auto;
 }
 .menu details article .warnings {
   display: flex;

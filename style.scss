@@ -39,7 +39,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center; // moves it right
-    align-items: center;  // moves is dow
+    align-items: center;  // moves it down
     height: 30vh;
     color: white;
     //border: 1px solid red;
@@ -52,21 +52,29 @@ header {
         height: 30vh;
         padding-left: 60px;
         background-color: c.$green-dark;
-        //border: 1px solid red;
-        h2 {
+        //gap: 10px;
+        
+        .hero-page-heading {
             font-family: "Rammetto One", sans-serif;
-            font-size: 2.4em;
-            margin: 0;
+            font-size: 2.0em;
+            padding: 0px;
+        }
+        .hero-page-description {
+            padding: 0px;
+            margin-bottom: 20px;
         }
         .hero-btn-reviews {
-            //border: 2px solid white;
+            border: 2px solid white;
             font-weight: 600;
             padding: 10px 30px;
+            //margin-top: 10px;
         }
     }
     .hero-page-image {
+        background-color: c.$green-dark;
         width: 50%;
         height: 30vh;
+        //object-fit: cover;
     }
 }
 
@@ -116,10 +124,12 @@ header {
             align-items: center;
             width: 250px;
             //height: 300px;
-            padding: 10px;
+            padding: 16px;
             img {
-                width: 24vw;
-                height: 70%;
+                //width: 24vw;
+                // height: 70%
+                width: 250px;
+                height: auto;
             }
             .warnings {
                 display: flex;
