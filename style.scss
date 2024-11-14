@@ -1,252 +1,281 @@
-@use './SCSS/partials/colors' as c;
+@use "./SCSS/partials/colors" as c;
+@use "./SCSS/partials/media-queries" as q;
 
 body {
-    height: 100vh;
-    width: 100%;
-    font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  
+  @include q.tablet {
+    width: 700px;
+  }
+  @include q.large-tablet {
+    width: 700px;
+  } 
+  @include q.laptop {
+    width: 1010px;
+  }
+  @include q.desktop {
+    width: 1010px;
+  }
+
 }
 header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+  padding: 0px 60px;
+  //border: 1px solid red;
+  .logo {
+    width: 30px;
+    height: 30px;
+  }
+  nav {
+    padding-right: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    height: 6vh;
-    padding: 0px 60px;
-    //border: 1px solid red;
-    .logo {
-        width: 30px;
-        height: 30px;
+    gap: 1em;
+    a {
+      color: c.$black;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
-    nav {
-        padding-right: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 1em;
-        a {
-            color: c.$black;
-            font-weight: bold;
-            text-decoration: none;
-            text-transform: uppercase;
-            &:hover {
-                transform: scale(1.05);
-            }
-        }
+
+    @include q.laptop {
+      a {
+        color: red;
+      }
     }
+  }
 }
 .hero-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; // moves it right
+  align-items: center; // moves it down
+  height: 30vh;
+  color: white;
+  //border: 1px solid red;
+  .hero-page-text {
     display: flex;
-    flex-direction: row;
-    justify-content: center; // moves it right
-    align-items: center;  // moves it down
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 50%;
     height: 30vh;
-    color: white;
-    //border: 1px solid red;
-    .hero-page-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
-        width: 50%;
-        height: 30vh;
-        padding-left: 60px;
-        background-color: c.$green-dark;
-        //gap: 10px;
-        
-        .hero-page-heading {
-            font-family: "Rammetto One", sans-serif;
-            font-size: 2.0em;
-            padding: 0px;
-        }
-        .hero-page-description {
-            padding: 0px;
-            margin-bottom: 20px;
-        }
-        .hero-btn-reviews {
-            border: 2px solid white;
-            font-weight: 600;
-            padding: 10px 30px;
-            //margin-top: 10px;
-        }
+    padding-left: 60px;
+    background-color: c.$green-dark;
+    .hero-page-heading {
+      font-family: "Rammetto One", sans-serif;
+      font-size: 2em;
+      padding: 0px;
     }
-    .hero-page-image {
-        background-color: c.$green-dark;
-        width: 50%;
-        height: 30vh;
-        //object-fit: cover;
+    .hero-page-description {
+      padding: 0px;
+      margin-bottom: 20px;
     }
+    .hero-btn-reviews {
+      border: 2px solid white;
+      font-weight: 600;
+      padding: 10px 30px;
+      //margin-top: 10px;
+    }
+  }
+  .hero-page-image {
+    background-color: c.$green-dark;
+    width: 50%;
+    height: 30vh;
+    //object-fit: cover;
+  }
 }
 
 .menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 60px;
-    h2 {
-        font-family: "Rammetto One", sans-serif;
-        font-size: 2.4em;
-        margin: 0;
-        color: c.$pink;
-    }
-    section {
-        width: 100%;
-        padding: 10px 0px;
-    }
-    /* header of the dropdown list */
-    summary {
-        background-color: c.$pink-light;
-        width: 100%;
-        font-weight: bold;
-        padding: 10px 0px;
-    }
-    /* dropdown list + header - outer body */
-    details {
-        background-color: white;
-        
-        // this is the card content
-        div {
-            background-color: white;
-            padding-top: 10px;
-            margin: 0px;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 10px;
-        }
-        article {
-            background-color: c.$pink-light;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 250px;
-            //height: 300px;
-            padding: 16px;
-            img {
-                //width: 24vw;
-                // height: 70%
-                width: 250px;
-                height: auto;
-            }
-            .warnings {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 0px;
-                gap: 10px;
-                background-color: c.$pink-light;
-                //padding-bottom: 10px;
-                
-            }
-            .contains {
-                display: flex;
-                flex-direction: row;
-                justify-content:flex-start;
-                align-items: center;
-                gap: 10px;
-                font-size: 0.8em;
-                padding: 0;
-                margin: 0;
-                background-color: c.$pink-light;
-                h3 {
-                    font-size: 1.3em;
-                    padding: 0px;
-                    //border: 1px solid red;
-                }
-                .icon {
-                    width: 20px;
-                    height: 20px;
-                    padding: 0px;
-                }
-            }
-        } 
-    }
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 60px;
+  h2 {
+    font-family: "Rammetto One", sans-serif;
+    font-size: 2.4em;
+    margin: 0;
+    color: c.$pink;
+  }
+  section {
+    width: 100%;
+    padding: 10px 0px;
+  }
+  /* header of the dropdown list */
+  summary {
+    background-color: c.$pink-light;
+    width: 100%;
+    font-weight: bold;
+    padding: 10px 0px;
+  }
+  /* dropdown list + header - outer body */
+  details {
+    background-color: white;
 
-.reviews {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-    padding: 20px 60px;
-    background-color: c.$pink;
-    h2 {
-        font-family: "Rammetto One", sans-serif;
-        font-size: 2.4em;
-        margin: 0;
-        color: white;
+    // this is the card content
+    div {
+      background-color: white;
+      padding-top: 10px;
+      margin: 0px;
     }
-    .review-cards {
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    article {
+      background-color: c.$pink-light;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 250px;
+      //height: 300px;
+      padding: 16px;
+      img {
+        //width: 24vw;
+        // height: 70%
+        width: 250px;
+        height: auto;
+      }
+      .warnings {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
-        padding: 10px;
-        font-size: 0.9em;
-        article {
-            border: 2px solid white;
-            width: 42%;
-            height: 100px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            .review-text-container {
-                display: flex;
-                flex-direction: rov;
-                justify-content: flex-start;
-                align-items: flex-start;
-                padding: 5px;
-                gap: 10px;
-                :first-child {
-                    align-self: flex-start;
-                }
-                :last-child {
-                    align-self: flex-end;
-                }
-            }
-            img {
-                height: 20px;
-            }
-            .review-text {
-                font-style: italic;
-                font-weight: bold;
-                margin: 0px;
-            }
-            .review-ownership {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                
-            }
-        }
-    }
-}
-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 6vh;
-    padding: 0px 60px;
-    background-color: c.$green-light;
-    color: white;
-    border: 1px solid red;
-    .footer-logo {
+        padding: 0px;
+        gap: 10px;
+        background-color: c.$pink-light;
+        //padding-bottom: 10px;
+      }
+      .contains {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        gap: 0.4em;
-        img {
-            padding-bottom: 0.5em;
+        gap: 10px;
+        font-size: 0.8em;
+        padding: 0;
+        margin: 0;
+        background-color: c.$pink-light;
+        h3 {
+          font-size: 1.3em;
+          padding: 0px;
+          //border: 1px solid red;
         }
+        .icon {
+          width: 20px;
+          height: 20px;
+          padding: 0px;
+        }
+      }
     }
+  }
 }
 
+.reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: c.$pink;
+  h2 {
+    font-family: "Rammetto One", sans-serif;
+    font-size: 2.4em;
+    margin: 0;
+    color: white;
+  }
+  .review-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    font-size: 0.8em;
+    
+    @include q.large-tablet {
+        font-size: 0.9em;
+    }
+    @include q.laptop {
+     font-size: 0.9em;
+    }
+    @include q.desktop {
+      font-size: 1em;
+    } 
+    article {
+      border: 2px solid white;
+      width: 80%;
+      height: 100px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include q.laptop {
+        width: 42%;
+      }
+      .review-text-container {
+        display: flex;
+        flex-direction: rov;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 5px;
+        gap: 10px;
+        :first-child {
+          align-self: flex-start;
+        }
+        :last-child {
+          align-self: flex-end;
+        }
+      }
+      img {
+        height: 20px;
+      }
+      .review-text {
+        font-style: italic;
+        font-weight: bold;
+        margin: 0px;
+      }
+      .review-ownership {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 6vh;
+  padding: 0px 60px;
+  background-color: c.$green-light;
+  color: white;
+  border: 1px solid red;
+  .footer-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.4em;
+    img {
+      padding-bottom: 0.5em;
+    }
+  }
+}
 
 // @mixin full-screen {
 //     height: 100vh;
@@ -275,21 +304,3 @@ footer {
 //     flex-direction: $direction;
 //     justify-content: $justify;
 // }
-
-// // <uniquifier>: Use a unique and descriptive class name
-// // <weight>: Use a value from 300 to 800
-
-// .open-sans-<uniquifier> {
-//     font-family: "Open Sans", sans-serif;
-//     font-optical-sizing: auto;
-//     font-weight: <weight>;
-//     font-style: normal;
-//     font-variation-settings:
-//       "wdth" 100;
-//   }
-
-// .rammetto-one-regular {
-//     font-family: "Rammetto One", sans-serif;
-//     font-weight: 400;
-//     font-style: normal;
-//   }
