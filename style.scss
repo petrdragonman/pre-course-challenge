@@ -6,22 +6,26 @@ body {
   height: 100vh;
   max-width: 80%;
   font-family: "Open Sans", sans-serif;
-  
+
   @include q.tablet {
-    width: 700px;
-    max-width: 100%;
+    width: 100vh;
+    max-width: 80%;
+    
   }
   @include q.large-tablet {
     width: 700px;
     max-width: 100%;
-  } 
+    
+  }
   @include q.laptop {
     width: 1010px;
     max-width: 90%;
+    
   }
   @include q.desktop {
     width: 1010px;
     max-width: 80%;
+    
   }
 }
 
@@ -35,7 +39,6 @@ header {
   .logo {
     width: 30px;
     height: 30px;
-    
   }
   nav {
     padding-right: 10px;
@@ -52,29 +55,80 @@ header {
       &:hover {
         transform: scale(1.05);
       }
+      // @include q.tablet {
+        
+      //   color: green;
+      // }
+      // @include q.large-tablet {
+        
+      //   color: yellow;
+      // }
+      // @include q.laptop {
+        
+      //   color: pink;
+      // }
+      // @include q.desktop {
+        
+      //   color: purple;
+      // }
     }
   }
 }
 .hero-page {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center; // moves it right
-  align-items: center; // moves it down
-  height: 30vh;
+  align-items: start;
+  width: 100%;
   color: white;
-  //border: 1px solid red;
+  @include q.tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // moves it right
+    align-items: start; // moves it down
+    width: 100%;
+  }
+  @include q.large-tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; // moves it right
+    align-items: center; // moves it down
+    height: 42vh;
+  }
+
   .hero-page-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    width: 50%;
-    height: 30vh;
+    width: 86%;
+    height: 42vh;
     padding-left: 60px;
     background-color: c.$green-dark;
+
+    @include q.tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      width: 90%;
+      //height: 42vh;
+      padding-left: 60px;
+    }
+
+    @include q.large-tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      width: 50%;
+      //height: 42vh;
+      padding-left: 60px;
+    }
+
     .hero-page-heading {
       font-family: "Rammetto One", sans-serif;
-      font-size: 2em;
+      font-size: 2.2em;
       padding: 0px;
     }
     .hero-page-description {
@@ -95,10 +149,17 @@ header {
     }
   }
   .hero-page-image {
-    background-color: c.$green-dark;
-    width: 50%;
-    height: 30vh;
-    //object-fit: cover;
+      width: 100%;
+      margin-top: 5px;
+    @include q.large-tablet {
+      width: 50%;
+      margin-top: 5px;
+    }
+    & img {
+      height: 42vh;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 }
 
@@ -209,16 +270,16 @@ header {
     gap: 20px;
     padding: 10px;
     font-size: 0.8em;
-    
+
     @include q.large-tablet {
-        font-size: 0.9em;
+      font-size: 0.9em;
     }
     @include q.laptop {
-     font-size: 0.9em;
+      font-size: 0.9em;
     }
     @include q.desktop {
       font-size: 1em;
-    } 
+    }
     article {
       border: 2px solid white;
       width: 80%;
@@ -280,9 +341,6 @@ footer {
     }
   }
 }
-
-
-
 
 // @mixin full-screen {
 //     height: 100vh;
