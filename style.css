@@ -91,6 +91,13 @@ header nav a:hover {
   font-weight: 600;
   padding: 10px 30px;
 }
+.hero-page .hero-page-text a {
+  text-decoration: none;
+  color: white;
+}
+.hero-page .hero-page-text a :visited {
+  color: white;
+}
 .hero-page .hero-page-image {
   background-color: #689572;
   width: 50%;
