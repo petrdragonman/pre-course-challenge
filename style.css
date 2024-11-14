@@ -1,26 +1,31 @@
 body {
+  margin: auto;
   height: 100vh;
-  width: 100%;
+  max-width: 80%;
   font-family: "Open Sans", sans-serif;
 }
 @media screen and (min-width: 577px) {
   body {
     width: 700px;
+    max-width: 100%;
   }
 }
 @media screen and (min-width: 769px) {
   body {
     width: 700px;
+    max-width: 100%;
   }
 }
 @media screen and (min-width: 1025px) {
   body {
     width: 1010px;
+    max-width: 90%;
   }
 }
 @media screen and (min-width: 1081px) {
   body {
     width: 1010px;
+    max-width: 80%;
   }
 }
 
@@ -52,11 +57,6 @@ header nav a {
 }
 header nav a:hover {
   transform: scale(1.05);
-}
-@media screen and (min-width: 1025px) {
-  header nav a {
-    color: red;
-  }
 }
 
 .hero-page {
