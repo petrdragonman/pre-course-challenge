@@ -3,6 +3,26 @@ body {
   width: 100%;
   font-family: "Open Sans", sans-serif;
 }
+@media screen and (min-width: 577px) {
+  body {
+    width: 700px;
+  }
+}
+@media screen and (min-width: 769px) {
+  body {
+    width: 700px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  body {
+    width: 1010px;
+  }
+}
+@media screen and (min-width: 1081px) {
+  body {
+    width: 1010px;
+  }
+}
 
 header {
   display: flex;
@@ -32,6 +52,11 @@ header nav a {
 }
 header nav a:hover {
   transform: scale(1.05);
+}
+@media screen and (min-width: 1025px) {
+  header nav a {
+    color: red;
+  }
 }
 
 .hero-page {
@@ -85,14 +110,14 @@ header nav a:hover {
   font-family: "Rammetto One", sans-serif;
   font-size: 2.4em;
   margin: 0;
-  color: #FAA196;
+  color: #faa196;
 }
 .menu section {
   width: 100%;
   padding: 10px 0px;
 }
 .menu summary {
-  background-color: #EBC9C4;
+  background-color: #ebc9c4;
   width: 100%;
   font-weight: bold;
   padding: 10px 0px;
@@ -112,7 +137,7 @@ header nav a:hover {
   gap: 10px;
 }
 .menu details article {
-  background-color: #EBC9C4;
+  background-color: #ebc9c4;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,7 +154,7 @@ header nav a:hover {
   justify-content: center;
   padding: 0px;
   gap: 10px;
-  background-color: #EBC9C4;
+  background-color: #ebc9c4;
 }
 .menu details article .contains {
   display: flex;
@@ -140,7 +165,7 @@ header nav a:hover {
   font-size: 0.8em;
   padding: 0;
   margin: 0;
-  background-color: #EBC9C4;
+  background-color: #ebc9c4;
 }
 .menu details article .contains h3 {
   font-size: 1.3em;
@@ -158,7 +183,7 @@ header nav a:hover {
   justify-content: center;
   align-items: center;
   padding: 20px 60px;
-  background-color: #FAA196;
+  background-color: #faa196;
 }
 .reviews h2 {
   font-family: "Rammetto One", sans-serif;
@@ -172,16 +197,36 @@ header nav a:hover {
   justify-content: center;
   gap: 20px;
   padding: 10px;
-  font-size: 0.9em;
+  font-size: 0.8em;
+}
+@media screen and (min-width: 769px) {
+  .reviews .review-cards {
+    font-size: 0.9em;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .reviews .review-cards {
+    font-size: 0.9em;
+  }
+}
+@media screen and (min-width: 1081px) {
+  .reviews .review-cards {
+    font-size: 1em;
+  }
 }
 .reviews .review-cards article {
   border: 2px solid white;
-  width: 42%;
+  width: 80%;
   height: 100px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media screen and (min-width: 1025px) {
+  .reviews .review-cards article {
+    width: 42%;
+  }
 }
 .reviews .review-cards article .review-text-container {
   display: flex;
@@ -218,7 +263,7 @@ footer {
   align-items: center;
   height: 6vh;
   padding: 0px 60px;
-  background-color: #82A289;
+  background-color: #82a289;
   color: white;
   border: 1px solid red;
 }
