@@ -10,22 +10,18 @@ body {
   @include q.tablet {
     width: 100vh;
     max-width: 80%;
-    
   }
   @include q.large-tablet {
     width: 700px;
     max-width: 100%;
-    
   }
   @include q.laptop {
     width: 1010px;
     max-width: 90%;
-    
   }
   @include q.desktop {
     width: 1010px;
     max-width: 80%;
-    
   }
 }
 
@@ -55,44 +51,28 @@ header {
       &:hover {
         transform: scale(1.05);
       }
-      // @include q.tablet {
-        
-      //   color: green;
-      // }
-      // @include q.large-tablet {
-        
-      //   color: yellow;
-      // }
-      // @include q.laptop {
-        
-      //   color: pink;
-      // }
-      // @include q.desktop {
-        
-      //   color: purple;
-      // }
     }
   }
 }
 .hero-page {
   display: flex;
   flex-direction: column;
-  justify-content: center; // moves it right
+  justify-content: center;
   align-items: start;
   width: 100%;
   color: white;
   @include q.tablet {
     display: flex;
     flex-direction: column;
-    justify-content: center; // moves it right
-    align-items: start; // moves it down
+    justify-content: center;
+    align-items: start;
     width: 100%;
   }
   @include q.large-tablet {
     display: flex;
     flex-direction: row;
-    justify-content: center; // moves it right
-    align-items: center; // moves it down
+    justify-content: center;
+    align-items: center;
     height: 42vh;
   }
 
@@ -105,27 +85,22 @@ header {
     height: 42vh;
     padding-left: 60px;
     background-color: c.$green-dark;
-
     @include q.tablet {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: start;
       width: 90%;
-      //height: 42vh;
       padding-left: 60px;
     }
-
     @include q.large-tablet {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: start;
       width: 50%;
-      //height: 42vh;
       padding-left: 60px;
     }
-
     .hero-page-heading {
       font-family: "Rammetto One", sans-serif;
       font-size: 2.2em;
@@ -208,11 +183,8 @@ header {
       flex-direction: column;
       align-items: center;
       width: 250px;
-      //height: 300px;
       padding: 16px;
       img {
-        //width: 24vw;
-        // height: 70%
         width: 250px;
         height: auto;
       }
@@ -223,7 +195,6 @@ header {
         padding: 0px;
         gap: 10px;
         background-color: c.$pink-light;
-        //padding-bottom: 10px;
       }
       .contains {
         display: flex;
@@ -238,7 +209,6 @@ header {
         h3 {
           font-size: 1.3em;
           padding: 0px;
-          //border: 1px solid red;
         }
         .icon {
           width: 20px;
@@ -345,23 +315,6 @@ footer {
 // @mixin full-screen {
 //     height: 100vh;
 //     width: 100%;
-// }
-
-// nav {
-//     height: 5vh;
-//     padding-top: 10px;
-//     padding-left: 2em;
-//     @include mixins.flex;
-//     gap: 1em;
-//     a {
-//       z-index: 2;
-//       color: colors.$foggy-light;
-//       text-decoration: none;
-//       &:hover {
-//         color: colors.$sunlit-leaf;
-//         transform: scale(1.05);
-//       }
-//     }
 // }
 
 // @mixin flex($direction: row, $justify: flex-start) {
