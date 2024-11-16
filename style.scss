@@ -1,5 +1,10 @@
+
 @use "./SCSS/partials/colors" as c;
 @use "./SCSS/partials/media-queries" as q;
+@use "./SCSS/sections/navbar";
+@use "./SCSS/sections/footer.scss";
+@use "./SCSS/sections/contact.scss";
+
 
 body {
   margin: auto;
@@ -25,35 +30,41 @@ body {
   }
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 6vh;
-  padding: 0px 60px;
-  .logo {
-    width: 30px;
-    height: 30px;
-  }
-  nav {
-    padding-right: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1em;
-    a {
-      color: c.$black;
-      font-weight: bold;
-      text-decoration: none;
-      text-transform: uppercase;
-      &:hover {
-        transform: scale(1.05);
-      }
-    }
-  }
-}
+
+
+
+// header {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   align-items: center;
+//   height: 6vh;
+//   padding: 0px 60px;
+//   .logo {
+//     width: 30px;
+//     height: 30px;
+//   }
+//   nav {
+//     padding-right: 10px;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: flex-start;
+//     align-items: center;
+//     gap: 1em;
+//     a {
+//       color: c.$black;
+//       font-weight: bold;
+//       text-decoration: none;
+//       text-transform: uppercase;
+//       &:hover {
+//         transform: scale(1.05);
+//       }
+//     }
+//   }
+// }
+
+
+
 .hero-page {
   display: flex;
   flex-direction: column;
@@ -291,26 +302,29 @@ header {
     }
   }
 }
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 6vh;
-  padding: 0px 60px;
-  background-color: c.$green-light;
-  color: white;
-  .footer-logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.4em;
-    img {
-      padding-bottom: 0.5em;
-    }
-  }
-}
+
+// footer {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   align-items: center;
+//   height: 6vh;
+//   padding: 0px 60px;
+//   background-color: c.$green-light;
+//   color: white;
+//   footer__copyright {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: flex-start;
+//     align-items: center;
+//     gap: 4em;
+//   }
+//   footer__links {
+//     padding-bottom: 0.5em;
+//   }
+// }
+
+
 
 // @mixin full-screen {
 //     height: 100vh;

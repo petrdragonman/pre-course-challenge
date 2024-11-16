@@ -1,0 +1,27 @@
+@use "../partials/colors" as c;
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vh;
+    padding: 0px 60px;
+    &__links {
+      padding-right: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 3em;
+      a {
+        color: c.$black;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Rammetto+One&display=swap"
+      rel="stylesheet"
+    />
+
+
+  </head>
+  <body>
+    <nav class="navbar">
+      <section class="logo">
+        <img
+          src="./assets/icons/mug-hot-pink.svg"
+          alt="mug-hot"
+          height="30px"
+        />
+      </section>
+      <section class="navbar__links">
+        <!-- <a href="#home">Home</a> -->
+        <a href="./index.html">Home</a>
+        <a a href="#aboutSection">About</a>
+      </section>
+    </nav>
+
+    <main>
+        <form>
+            <article class="form__header__text">
+                <span>Contact Us!<span></span>
+            </article>
+            
+            <article class="form__body">
+                <div>
+                    <label for="fistNameInput">
+                        First name<span class="form__body__input-required">required</span>
+                    </label>
+                    <br>
+                    <!--id links and improves accessibility-->
+                    <input type="text" id="firstNameInput" class="form__body__input" required name="first-name"/>
+                </div>
+                <div>
+
+                    <label for="email">
+                        Email<span class="form__body__input-required">required</span>
+                    </label>
+                    <br>
+                    <input type="email" id="email" class="form__body__input" required name="email"/>
+                </div>
+                <div>
+                    <label for="topic">
+                        Please select topic<span class="form__body__input-required">required</span>
+                    </label>
+                    <br>
+                    <select id="element" name="element" required class="form__body__input">
+                        <!--you can add 'value' give it a more meaningful name or shorter name-->
+                        <option value="">Please select a topic...</option>
+                        <option value="bookings">Bookings</option>
+                        <option value="onlineOrders">Online orders</option>
+                        <option value="complains">Complains</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message">
+                        Message<span class="form__body__input-required">required</span>
+                    </label>
+                    <br>
+                    <textarea type="text" id="message" class="form__body__input-lg" required name="message"></textarea>
+                </div>     
+                <br>
+                <button type="submit" class="form__submit">Submit</button> 
+            </article>
+                  
+            
+        </form>
+    </main>
+
+    <footer class="footer">
+        <section class="footer__copyright">
+          <img
+            class="footer__copyright__logo"
+            src="./assets/icons/mug-hot-white.svg"
+            alt="mug-hot"
+            height="30px"
+          />
+          <span class="footer__copyright__text">Copyright 2024</span>
+        </section>
+        <section class="footer__links">
+          <img
+            src="./assets/icons/instagram-white.svg"
+            alt="instagram"
+            height="30px"
+          />
+        </section>
+      </footer>
+  </body>
+</html>
