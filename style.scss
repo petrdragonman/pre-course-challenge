@@ -4,6 +4,7 @@
 @use "./SCSS/sections/navbar";
 @use "./SCSS/sections/footer.scss";
 @use "./SCSS/sections/contact.scss";
+@use "./SCSS/partials/mixins";
 
 
 body {
@@ -30,85 +31,32 @@ body {
   }
 }
 
-
-
-
-// header {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   align-items: center;
-//   height: 6vh;
-//   padding: 0px 60px;
-//   .logo {
-//     width: 30px;
-//     height: 30px;
-//   }
-//   nav {
-//     padding-right: 10px;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: flex-start;
-//     align-items: center;
-//     gap: 1em;
-//     a {
-//       color: c.$black;
-//       font-weight: bold;
-//       text-decoration: none;
-//       text-transform: uppercase;
-//       &:hover {
-//         transform: scale(1.05);
-//       }
-//     }
-//   }
-// }
-
-
-
 .hero-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
+  @include mixins.flex(column, center, start);
   width: 100%;
   color: white;
   @include q.tablet {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
+    @include mixins.flex(column, center, start);
     width: 100%;
   }
   @include q.large-tablet {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flex(row, center, center);
     height: 42vh;
   }
 
   .hero-page-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
+    @include mixins.flex(column, center, start);
     width: 86%;
     height: 42vh;
     padding-left: 60px;
     background-color: c.$green-dark;
     @include q.tablet {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: start;
+      @include mixins.flex(column, center, start);
       width: 90%;
       padding-left: 60px;
     }
     @include q.large-tablet {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: start;
+      @include mixins.flex(column, center, start);
       width: 50%;
       padding-left: 60px;
     }
@@ -150,10 +98,7 @@ body {
 }
 
 .menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include mixins.flex(column, center, center);
   padding: 40px 60px;
   h2 {
     font-family: "Rammetto One", sans-serif;
@@ -208,10 +153,7 @@ body {
         background-color: c.$pink-light;
       }
       .contains {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
+        @include mixins.flex(row, flex-start, center);
         gap: 10px;
         font-size: 0.8em;
         padding: 0;
@@ -232,10 +174,7 @@ body {
 }
 
 .reviews {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include mixins.flex(column, center, center);
   padding: 20px 60px;
   background-color: c.$pink;
   h2 {
@@ -273,10 +212,7 @@ body {
         width: 42%;
       }
       .review-text-container {
-        display: flex;
-        flex-direction: rov;
-        justify-content: flex-start;
-        align-items: flex-start;
+        @include mixins.flex(row, flex-start, flex-start);
         padding: 5px;
         gap: 10px;
         :first-child {
@@ -302,37 +238,3 @@ body {
     }
   }
 }
-
-// footer {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   align-items: center;
-//   height: 6vh;
-//   padding: 0px 60px;
-//   background-color: c.$green-light;
-//   color: white;
-//   footer__copyright {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: flex-start;
-//     align-items: center;
-//     gap: 4em;
-//   }
-//   footer__links {
-//     padding-bottom: 0.5em;
-//   }
-// }
-
-
-
-// @mixin full-screen {
-//     height: 100vh;
-//     width: 100%;
-// }
-
-// @mixin flex($direction: row, $justify: flex-start) {
-//     display: flex;
-//     flex-direction: $direction;
-//     justify-content: $justify;
-// }

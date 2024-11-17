@@ -1,11 +1,9 @@
 @use "../partials/colors" as c;
+@use '../partials/mixins';
 
 
 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  @include mixins.flex(column, center, flex-start);
   gap: 20px;
   height: 60vh;
   background-color: c.$green-dark;
@@ -37,6 +35,7 @@ form {
     .form__submit {
         height: 30px;
         width: 150px;
+        font-size: 1em;
     } 
   }
 }
