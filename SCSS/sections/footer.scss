@@ -1,19 +1,14 @@
 @use "../partials/colors" as c;
+@use "../partials/mixins";
 
 .footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  @include mixins.flex(row, space-between, center);
   height: 6vh;
   padding: 0px 60px;
   background-color: c.$green-light;
   color: white;
   &__copyright {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    @include mixins.flex();
     gap: 0.4em;
     &__logo {
       padding-bottom: 0.5em;

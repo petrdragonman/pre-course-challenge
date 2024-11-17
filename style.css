@@ -83,6 +83,7 @@ form .form__body__input-lg {
 form .form__body .form__submit {
   height: 30px;
   width: 150px;
+  font-size: 1em;
 }
 
 body {
@@ -342,7 +343,7 @@ body {
 }
 .reviews .review-cards article .review-text-container {
   display: flex;
-  flex-direction: rov;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 5px;
