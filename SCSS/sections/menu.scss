@@ -1,0 +1,79 @@
+@use "../partials/colors" as c;
+@use "../partials/media-queries" as q;
+@use "../partials/mixins";
+
+.menu {
+  @include mixins.flex(column, center, center);
+  padding: 40px 60px;
+  h2 {
+    font-family: "Rammetto One", sans-serif;
+    font-size: 2.4em;
+    margin: 0;
+    color: c.$pink;
+  }
+  section {
+    width: 100%;
+    padding: 10px 0px;
+  }
+  /* header of the dropdown list */
+  summary {
+    background-color: c.$pink-light;
+    width: 100%;
+    font-weight: bold;
+    padding: 10px 0px;
+  }
+  /* dropdown list + header - outer body */
+  details {
+    background-color: white;
+
+    // this is the card content
+    div {
+      background-color: white;
+      padding-top: 10px;
+      margin: 0px;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    article {
+      background-color: c.$pink-light;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 250px;
+      padding: 16px;
+      img {
+        width: 250px;
+        height: auto;
+      }
+      .warnings {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0px;
+        gap: 10px;
+        background-color: c.$pink-light;
+      }
+      .contains {
+        @include mixins.flex(row, flex-start, center);
+        gap: 10px;
+        font-size: 0.8em;
+        padding: 0;
+        margin: 0;
+        background-color: c.$pink-light;
+        h3 {
+          font-size: 1.3em;
+          padding: 0px;
+        }
+        .icon {
+          width: 20px;
+          height: 20px;
+          padding: 0px;
+        }
+      }
+    }
+  }
+}

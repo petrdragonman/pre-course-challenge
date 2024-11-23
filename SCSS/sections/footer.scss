@@ -10,8 +10,9 @@
   &__copyright {
     @include mixins.flex();
     gap: 0.4em;
-    &__logo {
+    .logo {
       padding-bottom: 0.5em;
+      transform: scaleX(-1);
     }
   }
 }

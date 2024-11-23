@@ -1,0 +1,69 @@
+@use "../partials/colors" as c;
+@use "../partials/media-queries" as q;
+@use "../partials/mixins";
+
+.reviews {
+  @include mixins.flex(column, center, center);
+  padding: 20px 60px;
+  background-color: c.$pink;
+  h2 {
+    font-family: "Rammetto One", sans-serif;
+    font-size: 2.4em;
+    margin: 0;
+    color: white;
+  }
+  .review-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    font-size: 0.8em;
+
+    @include q.large-tablet {
+      font-size: 0.9em;
+    }
+    @include q.laptop {
+      font-size: 0.9em;
+    }
+    @include q.desktop {
+      font-size: 1em;
+    }
+    article {
+      border: 2px solid white;
+      width: 80%;
+      height: 100px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include q.laptop {
+        width: 42%;
+      }
+      .review-text-container {
+        @include mixins.flex(row, flex-start, flex-start);
+        padding: 5px;
+        gap: 10px;
+        :first-child {
+          align-self: flex-start;
+        }
+        :last-child {
+          align-self: flex-end;
+        }
+      }
+      img {
+        height: 20px;
+      }
+      .review-text {
+        font-style: italic;
+        font-weight: bold;
+        margin: 0px;
+      }
+      .review-ownership {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+}
