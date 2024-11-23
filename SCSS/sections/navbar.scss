@@ -5,6 +5,9 @@
     @include mixins.flex(row, space-between, center);
     height: 6vh;
     padding: 0px 60px;
+    .logo {
+      transform: scaleX(-1);
+    }
     &__links {
       padding-right: 10px;
       @include mixins.flex();
